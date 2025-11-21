@@ -102,35 +102,85 @@ Producția fotovoltaică urmează perfect ciclul solar diurn, cu maximum între 
 | ☀️ **Vară** | Solar maxim, eolian minim, consum pentru răcire |
 | 🍂 **Toamnă** | Tranziție, hidro scăzut |
 
-## Vizualizări
+# Vizualizări
 
-### 1. Producția Lunară pe Tipuri
+## 1. Producția Lunară pe Tipuri
+### Grafic cu bare stivuite (Stacked Bar Chart)
+
+- **Comparație totală:** Vizualizează rapid producția totală de energie per lună (înălțimea totală a barei)
+- **Compoziție pe surse:** Arată contribuția fiecărui tip de energie (cărbune, hidro, hidrocarburi, nuclear, eolian, fotovoltaic, biomasă) la totalul lunar
+- **Tendințe sezoniere:** Evidențiază variațiile – de exemplu, hidroenergia fluctuează semnificativ între luni (probabil din cauza precipitațiilor)
+- **Analiză agregată:** Permite observarea atât a detaliilor individuale, cât și a imaginii de ansamblu într-un singur grafic
 
 <img width="1188" height="590" alt="image" src="https://github.com/user-attachments/assets/7c96f2d6-7bc1-46f2-9fcf-3bdcf67ae03b" />
 
-### 2. Soldul Zilnic 2024 vs 2025
+## 2. Soldul Zilnic 2024 vs 2025
+### Grafic cu linii temporale (Time Series Line Chart)
+
+- **Vizualizare continuă:** Arată fluctuațiile zilnice ale soldului de energie pe parcursul întregului an, evidențiind volatilitatea sistemului
+- **Identificare pattern-uri:** Permite observarea ciclurilor regulate (zilnice/săptămânale) și a anomaliilor – de exemplu, vârfurile extreme pozitive/negative
+- **Comparație multi-anuală:** Cele două grafice suprapuse facilitează compararea comportamentului soldului între 2024 și 2025
+- **Analiza dezechilibrelor:** Valorile negative (deficit) și pozitive (surplus) sunt clar vizibile, ajutând la identificarea perioadelor critice când importul/exportul este necesar
 
 <img width="1189" height="790" alt="image" src="https://github.com/user-attachments/assets/fe4b77e4-dce0-45b7-8d10-8745b8a5c9fd" />
 
-### 3. Seria Temporală pe Sold
+## 3. Seria Temporală pe Sold
+### Seria temporală – Sold energetic (Time Series)
+
+- **Volatilitate detaliată:** Vizualizează fluctuațiile rapide și frecvente ale soldului energetic pe o perioadă lungă (2024–2025)
+- **Linia de echilibru:** Linia punctată la 0 MWh evidențiază clar momentele de surplus (valori pozitive) vs deficit (valori negative)
+- **Pattern-uri sezoniere:** Permite identificarea tendințelor pe termen lung – se observă variații mai mari în anumite perioade ale anului
+- **Granularitate ridicată:** Densitatea punctelor de date oferă o imagine completă a instabilității sistemului energetic
 
 <img width="1389" height="626" alt="image" src="https://github.com/user-attachments/assets/c57089a1-b5bd-424b-81c4-bd1d2f6be426" />
 
-### 4. Peek-ul Producției pe Ore
+## 4. Peek-ul Producției pe Ore
+### Producția pe ore (Hourly Bar Chart)
+
+- **Ciclu zilnic:** Arată clar profilul de producție energetică de-a lungul celor 24 de ore, evidențiind pattern-ul diurn
+- **Identificare vârfuri:** Barele înalte între 19:00–21:00 indică vârful de producție de seară, în timp ce intervalul 2:00–3:00 reprezintă minimele
+- **Comparație cu media:** Linia orizontală (5722 MWh) permite compararea rapidă a fiecărei ore cu producția medie zilnică
+- **Planificare operațională:** Ajută la înțelegerea momentelor când trebuie suplimentată capacitatea sau când există surplus disponibil pentru export/stocare
 
 <img width="1390" height="590" alt="image" src="https://github.com/user-attachments/assets/43198042-b694-4a57-9230-799abd9a86e7" />
 
-### 5. Consumul Mediu pe Zilele Săptămânii
+## 5. Consumul Mediu pe Zilele Săptămânii
+### Consumul mediu pe zilele săptămânii (Bar Chart)
+
+- **Pattern săptămânal:** Evidențiază clar diferențele de consum între zilele lucrătoare (Luni–Vineri) și weekend (Sâmbătă–Duminică)
+- **Identificare trend:** Consumul este relativ constant în intervalul Luni–Vineri (~6200–6400 MWh), apoi scade semnificativ în weekend (~5300–5700 MWh)
+- **Planificare resurse:** Ajută operatorii să anticipeze necesarul de producție în funcție de ziua săptămânii
+- **Simplitate:** Formatul cu bare simple facilitează comparația rapidă între cele 7 zile
 
 <img width="859" height="538" alt="image" src="https://github.com/user-attachments/assets/7c81adf1-151a-4380-8c1c-b0b5802b3db6" />
 
-### 6. Producția Medie Lunară 2024 vs 2025
+## 6. Producția Medie Lunară 2024 vs 2025
+### Producția medie lunară 2024 vs 2025 (Line Chart)
+
+- **Comparație anuală:** Cele două linii (2024 vs 2025) permit identificarea schimbărilor în producție între cei doi ani
+- **Sezonalitate:** Vizualizează clar variațiile sezoniere – producția mai mare în iarna/primăvara 2024, urmată de o scădere în 2025
+- **Trend-uri:** Tendința descendentă din primele luni ale anului 2025, comparativ cu 2024, poate sugera posibile probleme de capacitate
+- **Puncte de inflexiune:** Identifică lunile critice unde producția diferă semnificativ între ani
 
 <img width="859" height="470" alt="image" src="https://github.com/user-attachments/assets/174e543a-f0ce-4fb7-970c-a83a4618f7c9" />
 
-### 7. Comparare Consum și Producție
+## 7. Comparare Consum și Producție
+### Serii temporale separate – Consum vs Producție (Dual Time Series)
+
+- **Comparație independentă:** Cele două grafice separate permit analiza detaliată a pattern-urilor fără suprapunere vizuală confuză
+- **Volatilitate diferențiată:** Consumul (roșu) prezintă fluctuații mai regulate, în timp ce producția (cyan) are variații mult mai pronunțate
+- **Identificare sincronizare:** Permite observarea momentelor în care consumul și producția nu sunt sincronizate, evidențiind riscuri de dezechilibru
+- **Detaliu temporal:** Granularitatea ridicată pe întreaga perioadă 2024–2025 oferă o imagine completă a comportamentului sistemului
 
 <img width="1389" height="1000" alt="image" src="https://github.com/user-attachments/assets/a5a5bd36-9cd4-4bbd-b91a-31eb5848c5e4" />
+
+## 8. Comparare Consum și Producție pe ani
+### Comparație anuală lunară cu area chart (Stacked Area Chart)
+
+- **Comparație vizuală directă:** Zonele colorate permit compararea instantanee a volumelor totale între 2024 și 2025
+- **Gap-uri evidențiate:** Diferențele dintre cei doi ani sunt vizibile ca zone de separare între linii
+- **Consum vs Producție:** Cele două panouri arată că în 2025 consumul rămâne relativ stabil, însă producția scade dramatic în anumite luni
+- **Alarmă vizuală:** Evidențiază clar problemele – producția din 2025 este constant mai mică decât în 2024, sugerând un posibil deficit energetic
 
 <img width="1389" height="1000" alt="image" src="https://github.com/user-attachments/assets/eccc9fbb-265c-468f-8a67-c30760fb01eb" />
 
@@ -146,7 +196,7 @@ Producția fotovoltaică urmează perfect ciclul solar diurn, cu maximum între 
 - ✅ Identificarea trend-urilor
 
 
-<img width="1777" height="967" alt="image" src="https://github.com/user-attachments/assets/acd80605-f49b-4682-84e7-5175bd0a4049" />
+<img width="1895" height="871" alt="image" src="https://github.com/user-attachments/assets/c8edab5f-0d1f-4610-b380-4edc9237d543" />
 
 <img width="356" height="586" alt="image" src="https://github.com/user-attachments/assets/96beeb07-bb6f-4321-81ee-31edd228d923" />
 
